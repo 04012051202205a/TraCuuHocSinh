@@ -25,9 +25,8 @@
      
         <%
              request.setCharacterEncoding("UTF-8");
-            String hoten = request.getParameter("hoten");
-            
-            String sobd = request.getParameter("sobd");
+            String hoten = request.getParameter("hoten");           
+            String sobd = request.getParameter("sobd");         
             if (hoten != null || sobd != null) {
                 Connection conn = null;
                 PreparedStatement ps = null;
@@ -41,6 +40,7 @@
                     ps.setString(1, sobd);
 
                 }
+                
                 rs = ps.executeQuery();
               
                
